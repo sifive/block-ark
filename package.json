@@ -1,0 +1,22 @@
+{
+  "name": "block-ark",
+  "version": "1.0.0",
+  "description": "block with all sorts of bus interfaces",
+  "main": "index.js",
+  "scripts": {
+    "test": "duh val ark.json5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sifive/block-ark.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sifive/block-ark/issues"
+  },
+  "homepage": "https://github.com/sifive/block-ark#readme",
+  "dependencies": {
+    "duh": "github:sifive/duh"
+  }
+}
