@@ -1,16 +1,16 @@
 # block-ark
 
-block with all sorts of bus interfaces
+Block with all sorts of bus interfaces
 
-## Bust Interfaces
+## Bus Interfaces
 
 | type | Initiator | Target | mem |
 |-|-|-|-|
-| AMBA4.AXI4 | | | ✓ |
-| AMBA4.AXI4-Lite | | | ✓ |
-| AMBA4.AHBLite | | | ✓ |
-| AMBA3.APB | | | ✓ |
-| MEM.SPRAM | | | ✓ |
-| MEM.DPRAM | | | ✓ |
-| TileLink | | | ✓ |
-| AMBA4.AXI4Stream | | | |
+| AMBA4.AXI4-Lite  | i2  | t1  | ✓ |
+| AMBA4.AXI4       | i4  | t3  | ✓ |
+| AMBA4.AHBLite    | i6  | t5  | ✓ |
+| AMBA3.APB        | i8  | t7  | ✓ |
+| MEM.SPRAM        | i10 | t9  | ✓ |
+| MEM.DPRAM        | i12 | t11 | ✓ |
+| AMBA4.AXI4Stream | i14 | t13 |   |
+| TileLink         |     |     | ✓ |
