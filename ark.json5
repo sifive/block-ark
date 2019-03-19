@@ -296,7 +296,21 @@
       // i14_stream_TUSER: -4, // opt
 
       // TileLink - Target
+
       // TileLink - Initiator
+
+      // Bundle
+      sys_int0: 1,
+      sys_int1: 1,
+      sys_int2: 1,
+      sys_int3: 1,
+      sys_int4: 1,
+      sys_int5: 1,
+      sys_int6: 1,
+      sys_int7: 1,
+      sys_power_enable: 1,
+      sys_power_status: -1,
+      sys_clock_enable: 1
     },
   },
   component: {

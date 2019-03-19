@@ -1,6 +1,6 @@
 # block-ark
 
-Block with all sorts of bus interfaces
+Block with all sorts of bus interfaces from https://github.com/sifive/duh-bus
 
 ## Bus Interfaces
 
@@ -13,4 +13,6 @@ Block with all sorts of bus interfaces
 | MEM.SPRAM        | i10 | t9  | ✓ |
 | MEM.DPRAM        | i12 | t11 | ✓ |
 | AMBA4.AXI4Stream | i14 | t13 |   |
+| AMBA3.AXI        | i16 | t15 | ✓ |
 | TileLink         |     |     | ✓ |
+| Bundle           |     |     |   |
