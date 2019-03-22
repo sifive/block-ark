@@ -71,7 +71,7 @@ Each entry in `obj["component"]["busInterfaces"]` is a JSON reference ($ref) to
 a dictionary defining a single bus interface for a select portgroup.  The
 naming of these references follows the format:
 
-```json
+```
 busint-portgroup_{portgroup index}-mapping_{mapping index}-prefix_{portgroup prefix}-{master,slave}-{bus abstract name}
 ```
 
