@@ -189,8 +189,8 @@
       i6_ahblite_HREADYOUT: 1,
       i6_ahblite_HRESP: 1,
       i6_ahblite_HSELx: -1,
-      i6_ahblite_HREADY: -1,
-      i6_ahblite_HCLKEN: -1, // opt
+      i6_ahblite_HREADY: 1,
+      i6_ahblite_HCLKEN: 1, // opt
       i6_ahblite_HRUSER: 6, // opt
       i6_ahblite_HWUSER: -4, // opt
       i6_ahblite_HAUSER: -4, // opt
