@@ -5,18 +5,19 @@ Block with all sorts of bus interfaces from
 
 ## Bus Interfaces
 
-| type | Initiator | Target | mem |
+| type | Initiator     | Target | mem |
 |-|-|-|-|
-| AMBA4.AXI4-Lite  | i2  | t1  | ✓ |
-| AMBA4.AXI4       | i4  | t3  | ✓ |
-| AMBA4.AHBLite    | i6  | t5  | ✓ |
-| AMBA3.APB        | i8  | t7  | ✓ |
-| MEM.SPRAM        | i10 | t9  | ✓ |
-| MEM.DPRAM        | i12 | t11 | ✓ |
-| AMBA4.AXI4Stream | i14 | t13 |   |
-| AMBA3.AXI        | i16 | t15 | ✓ |
-| TileLink         |     |     | ✓ |
-| Bundle           |     |     |   |
+| AMBA4.AXI4-Lite      | i2  | t1  | ✓ |
+| AMBA4.AXI4           | i4  | t3  | ✓ |
+| AMBA4.AHBLite        | i6  | t5  | ✓ |
+| AMBA3.APB            | i8  | t7  | ✓ |
+| MEM.SPRAM            | i10 | t9  | ✓ |
+| MEM.DPRAM            | i12 | t11 | ✓ |
+| AMBA4.AXI4Stream     | i14 | t13 |   |
+| sifive.basic.channel | i16 | t15 |   |
+| AMBA3.AXI            |     |     | ✓ |
+| TileLink             |     |     | ✓ |
+| Bundle               |     |     |   |
 
 ## Walkthrough example import using duh
 
@@ -185,7 +186,7 @@ reference to the chosen JTAG mapping for portgroup\_14:
 ```console
 % cp ark-busprop.json ark-busprop.edit.json
 # remove incorrect bus mapping for portgroup_14
-# and validate the edited file 
+# and validate the edited file
 % duh validate ark-busprop.edit.json
 ```
 
@@ -199,7 +200,7 @@ previously assigned to a bus interface into structured bundles.
 ```
 
 The resulting `ark-final.json` file contains the previously inferred bus
-interfaces and an additional two structured bundles under 
+interfaces and an additional two structured bundles under
 `obj["component"]["busInterfaces"]`:
 
 ```json
@@ -266,4 +267,3 @@ The remaining `clock` and `reset_n` ports are grouped together in a separate
                     }
                 ]
             }
-

@@ -295,6 +295,16 @@
       // i14_stream_TDEST: -4, // opt
       // i14_stream_TUSER: -4, // opt
 
+      // channel -- Target
+      i15_channel_rdy: -1,
+      i15_channel_vld: 1,
+      i15_channel_dat: 32,
+
+      // channel -- Initiator
+      t16_channel_rdy: 1,
+      t16_channel_vld: -1,
+      t16_channel_dat: 8,
+
       // TileLink - Target
 
       // TileLink - Initiator
