@@ -16,7 +16,7 @@
     "url": "https://github.com/sifive/block-ark/issues"
   },
   "homepage": "https://github.com/sifive/block-ark#readme",
-  "dependencies": {
+  "devDependencies": {
     "duh": "github:sifive/duh"
   }
 }
