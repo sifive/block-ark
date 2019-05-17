@@ -1,0 +1,12 @@
+[
+    {
+        "commit": "7dd146488ea223e90168ec1dac33e5d7f45b2ac2",
+        "name": "sifive-skeleton",
+        "source": "git@github.com:sifive/sifive-skeleton.git"
+    },
+    {
+        "commit": "20ab3df331f4c34684b119c42de71f9c257fcb64",
+        "name": "sifive-blocks",
+        "source": "git@github.com:sifive/sifive-skeleton.git"
+    }
+]

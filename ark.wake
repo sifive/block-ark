@@ -1,0 +1,9 @@
+global def arkScalaModule =
+  def name = "ark"
+  def path = "{here}/src"
+  def scalaVersion = makeScalaVersion "2.12.8"
+  def deps = sifiveBlocksScalaModule, sifiveSkeletonScalaModule, Nil
+  makeScalaModule name path scalaVersion
+  | setScalaModuleSourceDirs ("src", Nil)
+  | setScalaModuleDeps deps
+  | setScalaModuleScalacOptions ("-Xsource:2.11", Nil)
