@@ -239,6 +239,10 @@
                     "name": "AXI4",
                     "version": "r0p0_0"
                 },
+                "props": {
+                    "maxTransferSize": 64,
+                    "canInterleave": false
+                },
                 "abstractionTypes": [
                     {
                         "viewRef": "RTLview",
