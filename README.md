@@ -3,6 +3,16 @@
 Block with all sorts of bus interfaces from
 [duh-bus](https://github.com/sifive/duh-bus)
 
+## Scala Compile Test
+requires wake 0.14 and wit 0.5
+```
+wit init workspace -a git@github.com:sifive/block-ark.git
+cd workspace
+wake --init .
+duh-export-scala block-ark/ark.full.json5 -o block-ark/src/
+wake -v compileScalaModule arkScalaModule
+```
+
 ## Bus Interfaces
 
 | type | Initiator     | Target | mem |
