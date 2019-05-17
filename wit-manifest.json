@@ -7,6 +7,6 @@
     {
         "commit": "20ab3df331f4c34684b119c42de71f9c257fcb64",
         "name": "sifive-blocks",
-        "source": "git@github.com:sifive/sifive-skeleton.git"
+        "source": "git@github.com:sifive/sifive-blocks.git"
     }
 ]
