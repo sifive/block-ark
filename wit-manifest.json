@@ -1,6 +1,6 @@
 [
     {
-        "commit": "7dd146488ea223e90168ec1dac33e5d7f45b2ac2",
+        "commit": "80ddb14faf784f648c3ea26536d649014b82c87d",
         "name": "sifive-skeleton",
         "source": "git@github.com:sifive/sifive-skeleton.git"
     },
