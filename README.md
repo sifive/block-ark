@@ -6,7 +6,7 @@ Block with all sorts of bus interfaces from
 ## Scala Compile Test
 requires wake 0.14 and wit 0.5
 ```
-wit init workspace -a git@github.com:sifive/block-ark.git
+wit init workspace -a git@github.com:sifive/block-ark.git::wake -a git@github.com:sifive/environment-example-sifive.git
 cd workspace
 wake --init .
 duh-export-scala block-ark/ark.full.json5 -o block-ark/src/
