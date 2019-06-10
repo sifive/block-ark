@@ -1,10 +1,10 @@
 global def arkScalaModule =
   def name = "ark"
   def rootDir = here
-  def scalaVersion = stringToScalaVersion "2.12.8"
+  def scalaVersion = sifiveSkeletonScalaModule.getScalaModuleScalaVersion
   def deps = sifiveBlocksScalaModule, sifiveSkeletonScalaModule, Nil
   def generatedSrcs Unit =
-    files "{rootDir}/src".mkdir.getPathName '.*\.scala'
+    files "{rootDir}/src".mkdir.getPathName `.*\.scala`
     | map makeStatePath
 
   makeScalaModule name rootDir scalaVersion
