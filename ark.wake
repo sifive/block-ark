@@ -1,0 +1,30 @@
+global def arkScalaModule =
+  def name = "ark"
+  def rootDir = here
+  def scalaVersion = sifiveSkeletonScalaModule.getScalaModuleScalaVersion
+  def deps = sifiveBlocksScalaModule, sifiveSkeletonScalaModule, Nil
+  def generatedSrcs Unit =
+    files "{rootDir}/src".mkdir.getPathName `.*\.scala`
+    | map makeStatePath
+
+  makeScalaModule name rootDir scalaVersion
+  | setScalaModuleSourceDirs ("src", Nil)
+  | setScalaModuleDeps deps
+  | setScalaModuleScalacOptions ("-Xsource:2.11", Nil)
+  | setScalaModuleFnGeneratedSources generatedSrcs
+
+def buildDir = "build/{here}"
+
+global def arkDUT _ =
+  def dutPlan =
+    def name = "ark-dut"
+    def config = "sifive.blocks.ark.WitharkTop"
+    def blocks = makeScalaBlock arkScalaModule config, Nil
+    makeTestSocketDUT name blocks
+
+  def userArgs =
+    def firrtlDir = mkdir "{buildDir}/firrtl"
+    def verilogDir = mkdir "{buildDir}/verilog"
+    makeRuntimeRocketChipDUTArgs firrtlDir verilogDir
+
+  rocketChipDUTMaker dutPlan userArgs

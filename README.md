@@ -3,6 +3,20 @@
 Block with all sorts of bus interfaces from
 [duh-bus](https://github.com/sifive/duh-bus)
 
+## Initializing the Workspace
+requires wake 0.15 and wit 0.8.0
+```
+wit init workspace -a git@github.com:sifive/block-ark.git::wake -a git@github.com:sifive/environment-example-sifive.git
+cd workspace
+wake --init .
+```
+
+## Generating Verilog
+```
+duh-export-scala block-ark/ark.full.json5 -o block-ark/src/
+wake -v arkDUT Unit
+```
+
 ## Bus Interfaces
 
 | type | Initiator     | Target | mem |
