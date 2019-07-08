@@ -1,12 +1,7 @@
 [
     {
-        "commit": "e30f4f12eebc40ac9683eb5a200a2440d8aea87c",
-        "name": "sifive-skeleton",
-        "source": "git@github.com:sifive/sifive-skeleton.git"
-    },
-    {
-        "commit": "152eafed78299de92b8bc45a930b6164c698cc85",
-        "name": "sifive-blocks",
-        "source": "git@github.com:sifive/sifive-blocks.git"
+        "commit": "764559a989e5f6582c365db7f53141c5362a5e9a",
+        "name": "soc-testsocket-sifive",
+        "source": "git@github.com:sifive/soc-testsocket-sifive.git"
     }
 ]
