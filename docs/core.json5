@@ -1,0 +1,17 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'core', version: '0.1.0',
+    model: {
+      ports: {}
+    },
+    busInterfaces: [{
+      name: 'sys',
+      interfaceMode: 'master',
+      busType: {vendor: 'amba.com', library: 'AMBA4', name: 'AXI4', version: 'r0p0_0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {},
+      }],
+    }]
+  }
+}

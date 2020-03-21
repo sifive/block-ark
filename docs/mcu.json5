@@ -1,0 +1,29 @@
+{
+  design: {
+    vendor: 'sifive.com', library: 'ark', name: 'mcu', version: '0.1.0',
+    instances: [
+      {name: 'core0', ref: {$ref: '#/refs/core'}},
+      {name: 'xbar0', ref: {$ref: '#/refs/xbar'}},
+      {name: 'xbar1', ref: {$ref: '#/refs/xbar'}},
+      {name: 'mem',   ref: {$ref: '#/refs/mem'}},
+      {name: 'i2c',   ref: {$ref: '#/refs/i2c'}},
+      {name: 'uart',  ref: {$ref: '#/refs/uart'}},
+    ],
+    connections: [
+      {source: ['core0', 'sys'], target: ['xbar0', 's0']},
+      {source: ['xbar0', 'm0'], target: ['xbar1', 's0']},
+      {source: ['xbar0', 'm1'], target: ['mem', 't']},
+      {source: ['xbar1', 'm0'], target: ['i2c', 'apb']},
+      {source: ['xbar1', 'm1'], target: ['uart', 'apb']},
+      {source: ['i2c', 'i2c'], export: 'i2c'},
+      {source: ['uart', 'uart'], export: 'uart'},
+    ]
+  },
+  refs: {
+    core: {vendor: 'sifive.com', library: 'ark', name: 'core', version: '0.1.0'},
+    xbar: {vendor: 'sifive.com', library: 'ark', name: 'xbar', version: '0.1.0'},
+    mem:  {vendor: 'sifive.com', library: 'ark', name: 'mem',  version: '0.1.0'},
+    i2c:  {vendor: 'sifive.com', library: 'ark', name: 'i2c',  version: '0.1.0'},
+    uart: {vendor: 'sifive.com', library: 'ark', name: 'uart', version: '0.1.0'},
+  }
+}
