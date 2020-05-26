@@ -3,7 +3,7 @@
     vendor: 'sifive.com', library: 'ark', name: 'mcu', version: '0.1.0',
     instances: [
       {name: 'core0',  ref: {$ref: '#/refs/core'}},
-      {name: 'xbar0',  ref: {$ref: '#/refs/xbar'}},
+      {name: 'xbar_0', ref: {$ref: '#/refs/xbar'}},
       {name: 'mem',    ref: {$ref: '#/refs/mem'}},
       {name: 'i2c_0',  ref: {$ref: '#/refs/i2c'}},
       {name: 'uart_0', ref: {$ref: '#/refs/uart'}},
