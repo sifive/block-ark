@@ -1,0 +1,59 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'xbar_0', version: '0.1.0',
+    model: {ports: {
+      s0_awvalid:  1, s0_awready: -1, s0_awaddr:  14, s0_awlen: 8, s0_awsize: 3, s0_awburst: 2,
+      s0_arvalid:  1, s0_arready: -1, s0_araddr:  14, s0_arlen: 8, s0_arsize: 3, s0_arburst: 2,
+      s0_wvalid:   1, s0_wready:  -1, s0_wdata:   32, s0_wstrb: 4,
+      s0_bvalid:  -1, s0_bready:   1,
+      s0_rvalid:  -1, s0_rready:   1, s0_rdata:  -32, s0_rlast: -1,
+
+      m0_wren: -1, m0_rden: -1, m0_addr: -14, m0_wrdata: -32, m0_rddata: 32,
+
+      m1_paddr: -10, m1_psel: -1, m1_penable: -1, m1_pwrite: -1, m1_prdata: 32, m1_pwdata: -32, m1_pready: 1, m1_pslverr: 1,
+
+      m2_paddr: -10, m2_psel: -1, m2_penable: -1, m2_pwrite: -1, m2_prdata: 32, m2_pwdata: -32, m2_pready: 1, m2_pslverr: 1,
+    }},
+    busInterfaces: [{
+      name: 's0', interfaceMode: 'slave',
+      busType: {vendor: 'amba.com', library: 'AMBA4', name: 'AXI4', version: 'r0p0_0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          AWVALID: 's0_awvalid', AWREADY: 's0_awready', AWADDR: 's0_awaddr', AWLEN: 's0_awlen', AWSIZE: 's0_awsize', AWBURST: 's0_awburst',
+          ARVALID: 's0_arvalid', ARREADY: 's0_arready', ARADDR: 's0_araddr', ARLEN: 's0_arlen', ARSIZE: 's0_arsize', ARBURST: 's0_arburst',
+          WVALID:  's0_wvalid',  WREADY:  's0_wready',  WDATA:  's0_wdata',  WSTRB: 's0_wstrb',
+          BVALID:  's0_bvalid',  BREADY:  's0_bready',
+          RVALID:  's0_rvalid',  RREADY:  's0_rready',  RDATA:  's0_rdata',  RLAST: 's0_rlast',
+        },
+      }],
+    }, {
+      name: 'm0', interfaceMode: 'master',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'SPRAM', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          WREN: 'm0_wren', RDEN: 'm0_rden', ADDR: 'm0_addr', WRDATA: 'm0_wrdata', RDDATA: 'm0_rddata',
+        },
+      }],
+    }, {
+      name: 'm1', interfaceMode: 'master',
+      busType: {vendor: 'amba.com', library: 'AMBA4', name: 'APB4', version: 'r0p0_0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          PADDR: 'm1_paddr', PSEL: 'm1_psel', PENABLE: 'm1_penable', PWRITE: 'm1_pwrite', PRDATA: 'm1_prdata', PWDATA: 'm1_pwdata', PREADY: 'm1_pready', PSLVERR: 'm1_pslverr',
+        },
+      }]
+    }, {
+      name: 'm2', interfaceMode: 'master',
+      busType: {vendor: 'amba.com', library: 'AMBA4', name: 'APB4', version: 'r0p0_0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          PADDR: 'm2_paddr', PSEL: 'm2_psel', PENABLE: 'm2_penable', PWRITE: 'm2_pwrite', PRDATA: 'm2_prdata', PWDATA: 'm2_pwdata', PREADY: 'm2_pready', PSLVERR: 'm2_pslverr',
+        },
+      }]
+    }]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'uart', version: '0.1.0',
+    model: {ports: {}},
+    busInterfaces: [{
+      name: 'apb',
+      interfaceMode: 'slave',
+      busType: {vendor: 'amba.com', library: 'AMBA4', name: 'APB4', version: 'r0p0_0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {},
+      }]
+    }]
+  }
+}

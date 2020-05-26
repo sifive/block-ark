@@ -1,0 +1,15 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'mem', version: '0.1.0',
+    model: {ports: {}},
+    busInterfaces: [{
+      name: 't',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'SPRAM', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {},
+      }],
+    }]
+  }
+}

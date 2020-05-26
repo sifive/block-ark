@@ -1,0 +1,15 @@
+{
+  catalog: {
+    vendor: 'sifive', library: 'ark', name: 'fab1', version: '0.1.0',
+    designs: [
+      {$ref: 'mcu.json5'},
+    ],
+    components: [
+      {$ref: 'core.json5'},
+      {$ref: 'xbar.json5'},
+      {$ref: 'mem.json5'},
+      {$ref: 'i2c.json5'},
+      {$ref: 'uart.json5'},
+    ]
+  },
+}

@@ -1,0 +1,5 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'xbar', version: '0.1.0'
+  }
+}
